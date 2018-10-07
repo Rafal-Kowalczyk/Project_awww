@@ -4,7 +4,7 @@
 @media (min-width: 768px) and (max-width: 1279px) {
 
     .container {
-        width: 80vw;
+        width: 100vw;
         margin: 0 auto;
     }
 
@@ -13,34 +13,32 @@
         font-size: 0.6em;
     }
 
-    nav {
-        height: 60px;
-    }
-
-    .navbar-nav {
-        padding: 5px;
+    nav .navbar-nav {
+        padding-top: 5px;
 
         a {
-            margin-right: 1rem;
+            font-size: 1em;
+            font-weight: 400;
+            margin-right: 0;
             padding: 10px 10px;
         }
     }
 
     .navbar-brand img {
         width: 200px;
-        height: 40px;
+        height: 50px;
     }
 
     .hero {
         padding-top: 15rem;
 
         h1 {
-            font-size: 3em;
+            font-size: 2em;
             line-height: 4rem;
         }
 
         p {
-            font-size: 1.5em;
+            font-size: 1em;
             padding-top: 0;
         }
 
@@ -48,6 +46,7 @@
             margin-top: 1.5rem;
             height: 4rem;
             padding: 1.0rem 1.2rem;
+            font-size: 1em;
 
             &.btn-blue {
                 width: 14rem;
@@ -65,7 +64,7 @@
 
         img {
             width: 80px;
-            height: 60px;
+            height: 70px;
             padding-bottom: 3rem;
         }
     }
@@ -78,7 +77,7 @@
     }
 
     .we__what h2 {
-        font-size: 1.5em;
+        font-size: 2em;
         padding-top: 2rem;
     }
 
@@ -120,7 +119,7 @@
     .technology__left,
     .stack__right {
         h2 {
-            font-size: 1.5em;
+            font-size: 2em;
             margin: 0.4em 0;
         }
 
@@ -139,6 +138,7 @@
 
     .address {
         margin-top: 10rem;
+        padding-top: 5rem;
         font-size: 0.8em;
     }
 
@@ -155,14 +155,19 @@
             padding: 0;
             font-size: 0.6em;
         }
+
+        input,
+        textarea {
+            font-size: 0.6em;
+        }
     }
 
     .name-block,
     .phone-block {
         input {
             width: 100%;
-            height: 40px;
-            padding-top: 1.5rem;
+            height: 35px;
+            padding-top: 1rem;
         }
 
         &.names,
@@ -174,13 +179,13 @@
 
     textarea {
         width: 100%;
-        height: 80px;
+        min-height: 80px;
         margin-top: 2rem;
     }
 
     input::placeholder,
     textarea::placeholder {
-        font-size: 0.8em;
+        font-size: 0.7em;
 
     }
 
@@ -190,14 +195,15 @@
 
     .submit-btn {
         font-size: 0.8em;
-        margin-top: 2rem;
+        margin-top: 0;
         max-width: 180px;
         max-height: 50px;
     }
 
     .footer {
-        margin-top: 9rem;
-        margin-bottom: 2rem;
+        margin-top: 10rem;
+        padding-top: 5rem;
+        margin-bottom: 5rem;
         font-size: 0.6em;
 
         & span {

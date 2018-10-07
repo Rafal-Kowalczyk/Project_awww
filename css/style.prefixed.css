@@ -9,10 +9,12 @@
 }
 
 body {
-  margin: 0 auto;
-  padding: 0;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
 }
 
 .row {
@@ -24,7 +26,7 @@ body {
 }
 
 .container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 0;
 }
@@ -39,10 +41,25 @@ body {
   padding: 0;
 }
 
-header {
+.header {
   width: 100%;
   max-height: 800px;
   font-size: 16px;
+}
+
+.jumbotron {
+  width: 100%;
+  max-height: 800px;
+  background: url("../images/bg2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  transform: scale(1.01);
 }
 
 nav {
@@ -52,41 +69,32 @@ nav {
   text-align: center;
 }
 
-nav .container-fluid {
-  padding-top: 4.0rem;
-  padding-left: 0;
-  padding-right: 0;
-}
-
-nav .container-fluid ul {
-  float: right;
-  font-weight: normal;
-  line-height: 3.5;
-}
-
 nav .navbar-brand {
   float: left;
   padding: 0;
+  background-color: transparent;
 }
 
-.navbar-nav {
+nav .navbar-nav {
+  float: right;
   list-style: none;
   color: #fff;
   text-decoration: none;
 }
 
-.navbar-nav a {
+nav .navbar-nav a {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.2em;
   font-weight: 400;
-  margin-right: 3rem;
-  padding: 10px 20px;
+  margin-right: 1rem;
+  padding: 15px 20px;
 }
 
-.navbar-nav a:hover {
+nav .navbar-nav a:hover {
   text-decoration: none;
   color: #fff;
   opacity: 0.75;
+  background-color: transparent;
 }
 
 header ul li:nth-child(4) a {
@@ -102,12 +110,8 @@ header ul li:nth-child(4) a:hover {
 }
 
 .hero {
-  max-height: 850px;
-  padding-top: 30rem;
-  background: url("../images/bg2.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  z-index: 10;
+  padding-top: 15rem;
 }
 
 .hero h1 {
@@ -132,12 +136,12 @@ header ul li:nth-child(4) a:hover {
   height: 5.0rem;
   padding: 1.1rem 1.4rem;
   border: none;
-  opacity: 0.75;
 }
 
 .hero .btn:hover {
   color: #fff;
   transform: scale(1.1);
+  opacity: 0.75;
 }
 
 .hero .btn.btn-blue {
@@ -198,13 +202,13 @@ header ul li:nth-child(4) a:hover {
 }
 
 .departament {
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 
 .departament a {
   background: #4b479e;
   width: 100%;
-  height: 60px;
+  max-height: 60px;
   color: #fff;
   border-radius: 0;
 }
@@ -247,6 +251,7 @@ header ul li:nth-child(4) a:hover {
 .product-1 p {
   color: #6e6e95;
   margin-top: 3rem;
+  font-size: 0.8em;
 }
 
 .section__technology {
@@ -393,7 +398,7 @@ header ul li:nth-child(4) a:hover {
 
 .form-block .name-block input,
 .form-block .phone-block input {
-  min-width: 48%;
+  min-width: 47%;
   max-height: 40px;
 }
 
@@ -401,7 +406,7 @@ header ul li:nth-child(4) a:hover {
 .form-block .name-block .phone,
 .form-block .phone-block .names,
 .form-block .phone-block .phone {
-  margin-right: 2.5rem;
+  margin-right: 3.5rem;
 }
 
 .form-block .name-block::focus,
@@ -411,7 +416,7 @@ header ul li:nth-child(4) a:hover {
 
 .form-block textarea {
   width: 100%;
-  max-height: 200px;
+  min-height: 100px;
   margin-top: 2rem;
 }
 
@@ -422,10 +427,10 @@ header ul li:nth-child(4) a:hover {
   color: #7dbd6e;
   font-family: "Work Sans", sans-serif;
   font-weight: 600;
-  width: 240px;
-  height: 50px;
+  max-width: 200px;
+  max-height: 50px;
   text-transform: uppercase;
-  margin-top: 2rem;
+  margin-top: 5rem;
   padding: 1.5rem;
 }
 
@@ -458,7 +463,7 @@ input::placeholder:focus {
 }
 
 .footer {
-  margin-top: 6rem;
+  margin-top: 5rem;
   margin-bottom: 6rem;
   width: 100%;
   text-transform: uppercase;
@@ -471,41 +476,41 @@ input::placeholder:focus {
 
 @media (min-width: 768px) and (max-width: 1279px) {
   .container {
-    width: 80vw;
+    width: 100vw;
     margin: 0 auto;
   }
   header {
     font-size: 0.6em;
   }
-  nav {
-    height: 60px;
+  nav .navbar-nav {
+    padding-top: 5px;
   }
-  .navbar-nav {
-    padding: 5px;
-  }
-  .navbar-nav a {
-    margin-right: 1rem;
+  nav .navbar-nav a {
+    font-size: 1em;
+    font-weight: 400;
+    margin-right: 0;
     padding: 10px 10px;
   }
   .navbar-brand img {
     width: 200px;
-    height: 40px;
+    height: 50px;
   }
   .hero {
     padding-top: 15rem;
   }
   .hero h1 {
-    font-size: 3em;
+    font-size: 2em;
     line-height: 4rem;
   }
   .hero p {
-    font-size: 1.5em;
+    font-size: 1em;
     padding-top: 0;
   }
   .hero .btn {
     margin-top: 1.5rem;
     height: 4rem;
     padding: 1.0rem 1.2rem;
+    font-size: 1em;
   }
   .hero .btn.btn-blue {
     width: 14rem;
@@ -519,7 +524,7 @@ input::placeholder:focus {
   }
   .lotto img {
     width: 80px;
-    height: 60px;
+    height: 70px;
     padding-bottom: 3rem;
   }
   .section__what {
@@ -528,7 +533,7 @@ input::placeholder:focus {
     margin-bottom: 6rem;
   }
   .we__what h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     padding-top: 2rem;
   }
   .we__what p {
@@ -558,7 +563,7 @@ input::placeholder:focus {
   }
   .technology__left h2,
   .stack__right h2 {
-    font-size: 1.5em;
+    font-size: 2em;
     margin: 0.4em 0;
   }
   .technology__left p,
@@ -573,6 +578,7 @@ input::placeholder:focus {
   }
   .address {
     margin-top: 10rem;
+    padding-top: 5rem;
     font-size: 0.8em;
   }
   .address-media li {
@@ -587,11 +593,15 @@ input::placeholder:focus {
     padding: 0;
     font-size: 0.6em;
   }
+  .form-block input,
+  .form-block textarea {
+    font-size: 0.6em;
+  }
   .name-block input,
   .phone-block input {
     width: 100%;
-    height: 40px;
-    padding-top: 1.5rem;
+    height: 35px;
+    padding-top: 1rem;
   }
   .name-block.names,
   .name-block .phone,
@@ -601,16 +611,16 @@ input::placeholder:focus {
   }
   textarea {
     width: 100%;
-    height: 80px;
+    min-height: 80px;
     margin-top: 2rem;
   }
   input:-ms-input-placeholder,
   textarea:-ms-input-placeholder {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   input::placeholder,
   textarea::placeholder {
-    font-size: 0.8em;
+    font-size: 0.7em;
   }
   input:-ms-input-placeholder:focus {
     line-height: 1.2;
@@ -620,13 +630,14 @@ input::placeholder:focus {
   }
   .submit-btn {
     font-size: 0.8em;
-    margin-top: 2rem;
+    margin-top: 0;
     max-width: 180px;
     max-height: 50px;
   }
   .footer {
-    margin-top: 9rem;
-    margin-bottom: 2rem;
+    margin-top: 10rem;
+    padding-top: 5rem;
+    margin-bottom: 5rem;
     font-size: 0.6em;
   }
   .footer span {
@@ -638,53 +649,58 @@ input::placeholder:focus {
   header {
     font-size: 0.4em;
   }
-  nav {
-    height: 0;
-  }
-  nav .navbar-brand {
-    margin-top: 0;
-  }
-  .container-fluid {
+  nav .container-fluid {
+    width: 100%;
     padding-top: 5rem;
     height: 50px;
   }
-  .navbar-brand img {
+  nav .navbar-brand img {
     width: 120px;
     height: 40px;
   }
-  .hero {
-    padding-top: 0;
+  nav .navbar-nav a {
+    font-size: 0.8em;
+    margin-right: 0;
+    padding: 5px;
+  }
+  nav .navbar-toggle {
+    background-color: transparent;
+    border: none;
+    margin-right: 0;
+  }
+  nav .icon-bar {
+    background-color: #fff;
   }
   .hero {
     padding-top: 10rem;
   }
   .hero h1 {
-    font-size: 3em;
-    line-height: 4rem;
+    font-size: 1.5em;
+    line-height: 3rem;
   }
   .hero p {
-    font-size: 1.5em;
+    font-size: 1em;
     padding-top: 0;
   }
   .hero .btn {
-    font-size: 1.2em;
-    margin-top: 1.2rem;
-    height: 3rem;
+    font-size: 0.7em;
+    margin-top: 1rem;
+    height: 3.5rem;
     padding: 1.0rem 1.0rem;
   }
   .hero .btn.btn-blue {
-    width: 8rem;
+    width: 10rem;
     margin-right: 1.2rem;
   }
   .hero .btn.btn-purple {
-    width: 10rem;
+    width: 12rem;
   }
   .lotto {
     margin-top: 2rem;
   }
   .lotto img {
-    width: 80px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     padding-bottom: 3rem;
   }
   .section__what {
@@ -704,10 +720,17 @@ input::placeholder:focus {
     padding-top: 2rem;
   }
   .departament {
-    margin: 5px 20px;
+    margin: 0;
   }
   .departament .product-1 {
-    padding: 0 60px;
+    padding: 0 4rem;
+  }
+  .departament .product-1 p {
+    font-size: 1em;
+  }
+  .technology__left p,
+  .stack__right p {
+    line-height: 1.5;
   }
   .address {
     margin-top: 6rem;
@@ -715,19 +738,22 @@ input::placeholder:focus {
   }
   .address p {
     margin-bottom: 0;
+    font-size: 0.8em;
+  }
+  .address li {
+    width: 50px;
+    height: 50px;
   }
   .fab {
     padding-top: 1rem;
-  }
-  .form-block {
-    height: 380px;
+    margin-right: 0;
   }
   .form-block h2 {
-    font-size: 0.8em;
+    font-size: 0.6em;
   }
   .name-block input,
   .phone-block input {
-    width: 60%;
+    width: 100%;
     height: 40px;
     padding-top: 1.2rem;
   }
@@ -758,13 +784,14 @@ input::placeholder:focus {
   }
   .submit-btn {
     font-size: 0.4em;
-    width: 150px;
-    height: 30px;
+    width: 180px;
+    height: 50px;
   }
   .footer {
     margin-top: 9rem;
+    padding-top: 5rem;
     margin-bottom: 2rem;
-    font-size: 0.6em;
+    font-size: 0.5em;
   }
   .footer span {
     padding-left: 0;
