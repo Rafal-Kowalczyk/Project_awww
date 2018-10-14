@@ -426,10 +426,6 @@ textarea::placeholder {
 
 }
 
-input::placeholder:focus {
-    line-height: 1.5;
-}
-
 .contact-form input:focus:invalid {
     border-bottom: 1px solid red;
 }
