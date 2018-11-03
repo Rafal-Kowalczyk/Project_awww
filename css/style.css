@@ -362,40 +362,57 @@ header ul li:nth-child(4) a:hover {
   font-size: 2em;
 }
 
+.form-block input {
+  width: 100%;
+}
+
+.form-block .left-form {
+  margin-right: 4rem;
+}
+
+.form-block .left-form label {
+  margin-right: 4rem;
+}
+
 .form-block input,
 .form-block textarea {
-  font-size: 0.8em;
+  box-sizing: border-box;
   padding: 0;
-  padding-top: 1.6rem;
+  padding-top: .6rem;
+  padding-bottom: .6rem;
   outline: none;
   border: none;
   border-bottom: 1px solid #fff;
   background: none;
   color: #fff;
   text-transform: uppercase;
+  text-decoration: none;
 }
 
-.form-block .name-block,
-.form-block .phone-block {
-  padding-top: 2rem;
+.form-block form div {
+  position: relative;
+  width: 47%;
+  margin-top: 2rem;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 0.8em;
 }
 
-.form-block .name-block input,
-.form-block .phone-block input {
-  min-width: 47%;
-  max-height: 40px;
+.form-block form div label {
+  position: absolute;
+  left: 0;
+  top: 6px;
+  transition: .5s;
+  pointer-events: none;
 }
 
-.form-block .name-block .names,
-.form-block .name-block .phone,
-.form-block .phone-block .names,
-.form-block .phone-block .phone {
-  margin-right: 3.5rem;
-}
-
-.form-block .name-block::focus,
-.form-block .phone-block::focus {
-  border: none;
+.form-block input:focus ~ label,
+.form-block textarea:focus ~ label,
+.form-block input:valid ~ label,
+.form-block textarea:valid ~ label {
+  top: -14px;
+  left: 0;
+  font-size: 0.7em;
 }
 
 .form-block textarea {
@@ -418,14 +435,9 @@ header ul li:nth-child(4) a:hover {
   padding: 1.5rem;
 }
 
-input::placeholder,
 textarea::placeholder {
   color: #fff;
   font-size: .8em;
-}
-
-input::placeholder:focus {
-  line-height: 1.5;
 }
 
 .contact-form input:focus:invalid {

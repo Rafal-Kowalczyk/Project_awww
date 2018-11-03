@@ -365,38 +365,53 @@ header ul li:nth-child(4) a {
         font-size: 2em;
     }
 
+    input {
+        width: 100%;
+    }
+    .left-form {
+        margin-right: 4rem;
+        label {
+           margin-right: 4rem;
+
+        }
+    }
     input,
     textarea {
-        font-size: 0.8em;
+        box-sizing: border-box;
         padding: 0;
-        padding-top: 1.6rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
         outline: none;
         border: none;
         border-bottom: 1px solid $color-white;
         background: none;
         color: $color-white;
         text-transform: uppercase;
+        text-decoration: none;
     }
-
-    .name-block,
-    .phone-block {
-        padding-top: 2rem;
-
-        input {
-            min-width: 47%;
-            max-height: 40px;
-        }
-
-        & .names,
-        .phone {
-            margin-right: 3.5rem;
-        }
-
-        &::focus {
-            border: none;
-        }
+    form div {
+        position: relative;
+        width: 47%;
+        margin-top: 2rem;
+        padding: 0;
+        text-transform: uppercase;
+        font-size: 0.8em;
     }
-
+    form div label {
+        position: absolute;
+        left: 0;
+        top: 6px;
+        transition: .5s;
+        pointer-events: none;
+    }
+    input:focus ~ label,
+    textarea:focus ~ label,
+    input:valid ~ label,
+    textarea:valid ~ label {
+        top: -14px;
+        left: 0;
+        font-size: 0.7em;
+    }
     textarea {
         width: 100%;
         min-height: 100px;
@@ -418,12 +433,9 @@ header ul li:nth-child(4) a {
 
     }
 }
-
-input::placeholder,
 textarea::placeholder {
     color: $color-white;
     font-size: .8em;
-
 }
 
 .contact-form input:focus:invalid {

@@ -220,15 +220,21 @@
                         <h2>Formularz kontaktowy</h2>
                     </div>
                     <form class="contact-form">
-                        <div class="name-block">
-                            <input class="names" type="text" placeholder="Imię i Nazwisko" pattern="[a-zA-Z]+"
-                                minlength="3" required />
-                            <input class="email" type="email" placeholder="Adres E-mail" required />
+                        <div class="col-lg-6 col-sm-12 col-xs-12 left-form">
+                            <input type="text" pattern="[a-zA-Z]+" minlength="3" required />
+                            <label>Imię i Nazwisko</label>
                         </div>
-                        <div class="phone-block">
-                            <input class="phone" type="tel" name="phone" placeholder="Numer telefonu" pattern="[0-9]+"
-                                minlength="9" />
-                            <input class="topic" type="text" placeholder="Temat wiadomości" minlength="3" required />
+                        <div class="col-lg-6 col-sm-12 col-xs-12 right-form">
+                            <input type="email" required />
+                            <label>Adres e-mail</label>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 col-xs-12 left-form">
+                            <input type="tel" pattern="[0-9]+" minlength="9" required />
+                            <label>Numer telefonu</label>
+                        </div>
+                        <div class="col-lg-6 col-sm-12 col-xs-12 right-form">
+                            <input type="text" minlength="3" required />
+                            <label>Temat wiadomości</label>
                         </div>
                         <textarea placeholder="Treść wiadomości" minlength="3" required></textarea>
                         <input class="submit-btn" type="submit" value="Wyślij wiadomość" />
